@@ -59,6 +59,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
 
     // Navigation Dependencies
     implementation(libs.kotlinx.serialization)
@@ -70,6 +71,7 @@ dependencies {
     // Dagger Hilt Dependencies
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
+    implementation(libs.hilt.navigation)
 
     // Retrofit Dependencies
     implementation(libs.retrofit)
