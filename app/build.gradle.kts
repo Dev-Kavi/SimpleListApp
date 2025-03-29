@@ -2,6 +2,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.hilt)
+    kotlin("kapt")
 }
 
 android {
@@ -56,4 +59,28 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // Navigation Dependencies
+    implementation(libs.kotlinx.serialization)
+    implementation(libs.androidx.nav.compose)
+    implementation(libs.androidx.nav.fragment)
+    implementation(libs.androidx.nav.ui)
+    implementation(libs.androidx.nav.dynamic.features.fragment)
+
+    // Dagger Hilt Dependencies
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
+
+    // Retrofit Dependencies
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.moshi)
+
+    // OkHttp Dependencies
+    implementation(libs.okHttp)
+    implementation(libs.okHttp.logging)
+
+}
+
+kapt {
+    correctErrorTypes = true
 }

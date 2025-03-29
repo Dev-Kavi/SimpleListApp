@@ -9,6 +9,18 @@ lifecycleRuntimeKtx = "2.6.1"
 activityCompose = "1.8.0"
 composeBom = "2024.09.00"
 
+# Navigation
+kotlinSerialization = "1.7.3"
+kotlinPluginSerialization = "2.0.21"
+navVersion = "2.8.9"
+
+# Dagger Hilt
+hiltVersion = "2.51.1"
+
+# Retrofit
+retrofitVersion = "2.9.0"
+okHttpVersion = "4.9.0"
+
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -25,8 +37,29 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 
+# Navigation
+kotlinx-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinSerialization" }
+androidx-nav-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navVersion" }
+androidx-nav-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navVersion" }
+androidx-nav-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navVersion" }
+androidx-nav-dynamic-features-fragment = { group = "androidx.navigation", name = "navigation-dynamic-features-fragment", version.ref = "navVersion" }
+
+# Dagger Hilt
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hiltVersion" }
+hilt-android-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hiltVersion" }
+
+# Retrofit
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofitVersion" }
+retrofit-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofitVersion" }
+
+# OkHttp
+okHttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okHttpVersion" }
+okHttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okHttpVersion"}
+
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinPluginSerialization"}
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hiltVersion" }
