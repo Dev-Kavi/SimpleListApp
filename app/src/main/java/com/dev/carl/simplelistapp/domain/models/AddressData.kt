@@ -1,8 +1,8 @@
-package com.dev.carl.simplelistapp.data.remote.models
+package com.dev.carl.simplelistapp.domain.models
 
-data class Address(
+data class AddressData(
     val city: String,
-    val geo: Geo,
+    val geo: GeoData,
     val street: String,
     val suite: String,
     val zipcode: String

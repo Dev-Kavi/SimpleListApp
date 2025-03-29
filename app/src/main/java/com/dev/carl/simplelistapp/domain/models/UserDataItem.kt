@@ -1,8 +1,8 @@
-package com.dev.carl.simplelistapp.data.remote.models
+package com.dev.carl.simplelistapp.domain.models
 
-data class UserResponseItem(
-    val address: Address,
-    val company: Company,
+data class UserDataItem(
+    val address: AddressData,
+    val company: CompanyData,
     val email: String,
     val id: Int,
     val name: String,
