@@ -24,6 +24,10 @@ retrofitVersion = "2.9.0"
 okHttpVersion = "4.9.0"
 espressoWeb = "3.6.1"
 
+# Data Store
+datastorePreferences = "1.1.1"
+gsonVersion = "2.12.1"
+
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -61,8 +65,10 @@ retrofit-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", v
 # OkHttp
 okHttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okHttpVersion" }
 okHttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okHttpVersion"}
-androidx-espresso-web = { group = "androidx.test.espresso", name = "espresso-web", version.ref = "espressoWeb" }
 
+# Data Store / Gson
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gsonVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -81,6 +81,10 @@ dependencies {
     implementation(libs.okHttp)
     implementation(libs.okHttp.logging)
 
+    // Data Store
+    implementation(libs.androidx.datastore.preferences)
+    implementation(libs.gson)
+
 }
 
 kapt {
