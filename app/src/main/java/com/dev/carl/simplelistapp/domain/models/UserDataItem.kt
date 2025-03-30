@@ -1,5 +1,8 @@
 package com.dev.carl.simplelistapp.domain.models
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class UserDataItem(
     val address: AddressData,
     val company: CompanyData,

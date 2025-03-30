@@ -22,7 +22,6 @@ hiltNavigation = "1.0.0"
 # Retrofit
 retrofitVersion = "2.9.0"
 okHttpVersion = "4.9.0"
-espressoWeb = "3.6.1"
 
 # Data Store
 datastorePreferences = "1.1.1"

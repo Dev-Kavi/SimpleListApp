@@ -1,10 +1,13 @@
 package com.dev.carl.simplelistapp.di
 
+import android.content.Context
 import com.dev.carl.simplelistapp.common.Constants.BASE_URL
 import com.dev.carl.simplelistapp.data.remote.api.UserApi
+import com.dev.carl.simplelistapp.domain.utils.UserDataStore
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
@@ -23,5 +26,11 @@ object AppModule {
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
             .create()
+    }
+
+    @Provides
+    @Singleton
+    fun provideUserDataStore(@ApplicationContext context: Context): UserDataStore {
+        return UserDataStore(context)
     }
 }
